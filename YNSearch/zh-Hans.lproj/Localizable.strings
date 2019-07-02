@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  YNSearch
+
+  Created by smart on 2019/7/2.
+  Copyright © 2019 SeungyounYi. All rights reserved.
+*/
+
+"Categories" = "分类";
+"Search History" = "搜索历史";
+"Clear search history" = "清除搜索历史";
+"No search history" = "没有搜索历史";
+
+"Search" = "搜索";
+"Cancel" = "取消";
+
+

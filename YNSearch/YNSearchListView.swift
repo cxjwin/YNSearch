@@ -64,7 +64,6 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
         self.ynSearchListViewDelegate?.ynSearchListViewDidScroll()
     }
     
-    
     open func initView() {
         self.delegate = self
         self.dataSource = self

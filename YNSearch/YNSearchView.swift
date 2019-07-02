@@ -83,9 +83,5 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
     open func ynSearchListViewDidScroll() {
         self.delegate?.ynSearchListViewDidScroll()
     }
-    
-
-
-
 
 }

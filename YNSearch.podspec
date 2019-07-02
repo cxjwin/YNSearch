@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '2.4.0'
+  s.version          = '2.4.1'
   s.summary          = 'Awesome fully customizable search view written in Swift 5.0'
 
   s.description      = <<-DESC
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
 
   s.source           = { :git => 'https://github.com/younatics/YNSearch.git', :tag => s.version.to_s }
   s.source_files     = 'YNSearch/*.swift'
-  s.resources        = "YNSearch/*.xcassets"
+  s.resources        = ["YNSearch/*.xcassets", "YNSearch/*.lproj"]
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.frameworks = 'UIKit', 'Foundation'
   s.requires_arc = true
 end

@@ -67,7 +67,7 @@ open class YNSearchMainView: UIView {
     
     open func initView(categories: [String]) {
         self.categoryLabel = UILabel(frame: CGRect(x: margin, y: 0, width: width - 40, height: 50))
-        self.categoryLabel.text = NSLocalizedString("Categories", bundle: Bundle(for: YNSearchMainView.self), comment: "Categories")
+        self.categoryLabel.text = NSLocalizedString("Categories", bundle: Bundle.localizationBundle(), comment: "Categories")
         self.categoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.categoryLabel.textColor = UIColor.darkGray
         self.addSubview(self.categoryLabel)
@@ -98,7 +98,7 @@ open class YNSearchMainView: UIView {
         }
         guard let originY = ynCategoryButtons.last?.frame.origin.y else { return }
         self.searchHistoryLabel = UILabel(frame: CGRect(x: margin, y: originY + 30, width: width - 40, height: 40))
-        self.searchHistoryLabel.text = NSLocalizedString("Search History", bundle: Bundle(for: YNSearchMainView.self), comment: "Search History")
+        self.searchHistoryLabel.text = NSLocalizedString("Search History", bundle: Bundle.localizationBundle(), comment: "Search History")
         self.searchHistoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.searchHistoryLabel.textColor = UIColor.darkGray
         self.addSubview(self.searchHistoryLabel)
@@ -137,7 +137,7 @@ open class YNSearchMainView: UIView {
         
         if let lastHistoryView = self.ynSearchHistoryViews.last {
             self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: lastHistoryView.frame.origin.y + lastHistoryView.frame.height, width: width - (margin * 2), height: 40))
-            self.clearHistoryButton.setTitle(NSLocalizedString("Clear search history", bundle: Bundle(for: YNSearchMainView.self), comment: "Clear search history"), for: .normal)
+            self.clearHistoryButton.setTitle(NSLocalizedString("Clear search history", bundle: Bundle.localizationBundle(), comment: "Clear search history"), for: .normal)
             self.clearHistoryButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             self.clearHistoryButton.setTitleColor(UIColor.darkGray, for: .normal)
             self.clearHistoryButton.setTitleColor(UIColor.lightGray, for: .highlighted)
@@ -146,7 +146,7 @@ open class YNSearchMainView: UIView {
         } else {
             let y = self.searchHistoryLabel.frame.maxY
             self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: y, width: width - (margin * 2), height: 40))
-            self.clearHistoryButton.setTitle(NSLocalizedString("No search history", bundle: Bundle(for: YNSearchMainView.self), comment: "No search history"), for: .normal)
+            self.clearHistoryButton.setTitle(NSLocalizedString("No search history", bundle: Bundle.localizationBundle(), comment: "No search history"), for: .normal)
             self.clearHistoryButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             self.clearHistoryButton.setTitleColor(UIColor.red, for: .normal)
             self.addSubview(clearHistoryButton)

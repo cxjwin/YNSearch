@@ -30,7 +30,7 @@ open class YNSearchTextField: UITextField {
         
         self.leftView = searchImageViewWrapper
         self.returnKeyType = .search
-        self.placeholder = NSLocalizedString("Search", bundle: Bundle(for: YNSearchTextFieldView.self), comment: "Search")
+        self.placeholder = NSLocalizedString("Search", bundle: Bundle.localizationBundle(), comment: "Search")
         self.font = UIFont.systemFont(ofSize: 14)
     }
 }
@@ -57,7 +57,7 @@ open class YNSearchTextFieldView: UIView {
         self.cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         self.cancelButton.setTitleColor(UIColor.darkGray, for: .normal)
         self.cancelButton.setTitleColor(UIColor.darkGray.withAlphaComponent(0.3), for: .highlighted)
-        self.cancelButton.setTitle(NSLocalizedString("Cancel", bundle: Bundle(for: YNSearchTextFieldView.self), comment: "Cancel"), for: .normal)
+        self.cancelButton.setTitle(NSLocalizedString("Cancel", bundle: Bundle.localizationBundle(), comment: "Cancel"), for: .normal)
         self.cancelButton.isHidden = true
         self.addSubview(self.cancelButton)
     }
